@@ -184,11 +184,7 @@ namespace Introduction
 				Console.WriteLine();
 			}
 
-
-
-
 			}
-
 	}
 }
 
@@ -203,39 +199,4 @@ namespace Introduction
 
 
 
-//4
-//int n = 7;
 
-
-//5
-//int n = 7;
-
-
-//6
-//int n = 7;
-
-
-
-
-
-//for (int i = 0; i <= n; i++)
-//{
-//    for (int j = n; j > i; j--)
-//    {
-//        Console.Write("  ");
-//    }
-//    for (int j = 0; j <= i; j++)
-//    {
-//        Console.Write("*");
-//    } for (int k = 0; k <= i; k++)
-//    {
-//        Console.Write("*");
-//    }for (int d = 0; d <= i; d++)
-//    {
-//        Console.Write("*");
-//    }for (int s = 0; s <= i; s++)
-//    {
-//        Console.Write("*");
-//    }
-//    Console.WriteLine();
-//}
