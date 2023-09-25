@@ -1,9 +1,12 @@
 ﻿//#define CONSOLE_SETTINGS
+//#define CONSOLE_SHOOTER
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace Introduction
 {
@@ -55,23 +58,184 @@ namespace Introduction
 			Console.ResetColor(); 
 #endif
 
-            Console.Write("Введите Ваше имя: ");
-            string first_name = Console.ReadLine();
+			//Console.Write("Введите Ваше имя: ");
+			//string first_name = Console.ReadLine();
 
-            Console.Write("Введите Вашу фамилию: ");
-            string last_name = Console.ReadLine();
+			//Console.Write("Введите Вашу фамилию: ");
+			//string last_name = Console.ReadLine();
 
-            Console.Write("Введите Ваш возраст: ");
-            int age = Convert.ToInt32(Console.ReadLine());
+			//Console.Write("Введите Ваш возраст: ");
+			//int age = Convert.ToInt32(Console.ReadLine());
 
-            //1) Конкатенация строк:
-            Console.WriteLine("Имя: " + first_name + ", фамилия: " + last_name + ", возраст: " + age + " лет.");
+			//1) Конкатенация строк:
+			//Console.WriteLine("Имя: " + first_name + ", фамилия: " + last_name + ", возраст: " + age + " лет.");
 
-            //2) Форматирование строк:
-            Console.WriteLine(string.Format("Имя: {0}, фамилия: {1}, возраст: {2} лет.", first_name, last_name, age));
+			//2) Форматирование строк:
+			//Console.WriteLine(string.Format("Имя: {0}, фамилия: {1}, возраст: {2} лет.", first_name, last_name, age));
 
-            //3) Интерполяция строк:
-            Console.WriteLine($"Имя: {{{first_name}}}, фамилия: {last_name}, возраст: {age} лет.");
-        }
-    }
+			//3) Интерполяция строк:
+			//Console.WriteLine($"Имя: {{{first_name}}}, фамилия: {last_name}, возраст: {age} лет.");
+
+#if CONSOLE_SHOOTER
+			ConsoleKey key;
+            do
+            {
+                key = Console.ReadKey(true).Key;
+                switch (key)
+                {
+                    case ConsoleKey.W: Console.WriteLine("Вперед"); break;
+                    case ConsoleKey.S: Console.WriteLine("Назад"); break;
+                    case ConsoleKey.D: Console.WriteLine("Влево"); break;
+                    case ConsoleKey.A: Console.WriteLine("Вправо"); break;
+                    case ConsoleKey.Spacebar: Console.WriteLine("Прыжок"); break;
+                    default:
+                        Console.WriteLine("Error"); break;
+                }
+            } while (Convert.ToChar(key) != 27);
+#endif
+			
+			int n;
+			Console.WriteLine("Введите размер фигуры: ");
+			n = Convert.ToInt32(Console.ReadLine());		
+			Console.WriteLine();
+			//0
+			for (int i = 0; i < n; i++)
+			{
+				for (int j = 0; j < n; j++)
+				{
+					Console.Write("*");
+				}
+				Console.WriteLine();
+			}		
+			//1
+			for (int i = 0; i < n; i++)
+			{
+				for (int j = 0; j < i; j++)
+				{
+					Console.Write("* ");
+				}
+				Console.WriteLine();
+			}
+
+			//2			
+			for (int i = 0; i < n; i++)
+			{
+				for (int j = i; j < n; j++)
+				{
+					Console.Write("*");
+				}
+				Console.WriteLine();
+			}
+			//3
+			for (int i = 0; i < n; i++)
+			{
+				for (int j = 0; j < i; j++)
+				{
+					Console.Write("  ");
+				}
+				for (int j = i; j < n; j++)
+				{
+					Console.Write("* ");
+				}
+				Console.WriteLine();
+			}
+			//4
+			for (int i = 0; i < n; i++)
+			{
+				for (int j = i; j < (n - 1); j++)
+				{
+					Console.Write("  ");
+				}
+				for (int j = 0; j <= i; j++)
+				{
+					Console.Write("* ");
+				}
+				Console.WriteLine();
+			}
+			//5
+			for (int i = 0; i < n; i++)
+			{
+				for (int j = i; j < n; j++) Console.Write(" "); Console.Write("/");
+				for (int j = 0; j < i; j++) Console.Write("  "); Console.Write("\\");
+				Console.WriteLine();
+			}
+			for (int i = 0; i < n; i++)
+			{
+				for (int j = 0; j <= i; j++) Console.Write(" "); Console.Write("\\");
+				for (int j = i; j < n - 1; j++) Console.Write("  "); Console.Write("/");
+				Console.WriteLine();
+			}
+
+			//6
+			for (int i = 0; i < n; i++)
+			{
+				for (int j = 0; j < n; j++)
+				{
+					if ((i + j) % 2 == 0)
+					{
+						Console.Write("+ ");
+					}
+					else
+					{
+						Console.Write("- ");
+
+					}
+				}
+				Console.WriteLine();
+			}
+
+
+
+
+			}
+
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+//4
+//int n = 7;
+
+
+//5
+//int n = 7;
+
+
+//6
+//int n = 7;
+
+
+
+
+
+//for (int i = 0; i <= n; i++)
+//{
+//    for (int j = n; j > i; j--)
+//    {
+//        Console.Write("  ");
+//    }
+//    for (int j = 0; j <= i; j++)
+//    {
+//        Console.Write("*");
+//    } for (int k = 0; k <= i; k++)
+//    {
+//        Console.Write("*");
+//    }for (int d = 0; d <= i; d++)
+//    {
+//        Console.Write("*");
+//    }for (int s = 0; s <= i; s++)
+//    {
+//        Console.Write("*");
+//    }
+//    Console.WriteLine();
+//}
