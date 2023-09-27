@@ -93,7 +93,7 @@ namespace DataTypes
 			//double trip_to_the_cottageand_back = distance_to_the_cottage * gasoline_consumption * price_of_gasoline;
 			//Console.WriteLine("Общая стоимость:" + trip_to_the_cottageand_back);
 
-			
+
 			double a;
 			double b;
 			char oper;
