@@ -16,6 +16,7 @@ namespace DataTypes
 		static readonly string delimiter = "\n-------------------------------------\n";
 		static void Main(string[] args)
 		{
+
 #if LOGICAL_TYPES
 
 
@@ -62,6 +63,8 @@ namespace DataTypes
 #endif
 
 
+
+
 			//Console.WriteLine("Введите стоимость тетради:");
 			//double price_of_copybook = Convert.ToDouble(Console.ReadLine());
 			//Console.WriteLine("Введите количество тетрадей:");
@@ -94,44 +97,51 @@ namespace DataTypes
 			//Console.WriteLine("Общая стоимость:" + trip_to_the_cottageand_back);
 
 
-			double a;
-			double b;
-			char oper;
-			double result;
-			Console.WriteLine("Введите первое число:");
-			a = Convert.ToDouble(Console.ReadLine());
+			//double a;
+			//double b;
+			//char oper;
+			//double result;
+			//Console.WriteLine("Введите первое число:");
+			//a = Convert.ToDouble(Console.ReadLine());
 
-			Console.WriteLine("Введите оператор:");
-			oper = Convert.ToChar(Console.ReadLine());
+			//Console.WriteLine("Введите оператор:");
+			//oper = Convert.ToChar(Console.ReadLine());
 
-			Console.WriteLine("Введите второе число:");
-			b = Convert.ToDouble(Console.ReadLine());
+			//Console.WriteLine("Введите второе число:");
+			//b = Convert.ToDouble(Console.ReadLine());
 
-			if (oper == '+')
-			{
-				result = a + b;
-				Console.WriteLine("Сумма чисел равна: " +  result);
-				Console.ReadKey();
-			}
-			else if(oper == '-')
-			{
-				result = a - b;
-				Console.WriteLine("Разность чисел равна: " + result);
-				Console.ReadKey();
-			}
-			else if (oper == '*')
-			{
-				result = a * b;
-				Console.WriteLine("Умножение чисел равна: " + result);
-				Console.ReadKey();
+			//if (oper == '+')
+			//{
+			//	result = a + b;
+			//	Console.WriteLine("Сумма чисел равна: " +  result);
+			//	Console.ReadKey();
+			//}
+			//else if(oper == '-')
+			//{
+			//	result = a - b;
+			//	Console.WriteLine("Разность чисел равна: " + result);
+			//	Console.ReadKey();
+			//}
+			//else if (oper == '*')
+			//{
+			//	result = a * b;
+			//	Console.WriteLine("Умножение чисел равна: " + result);
+			//	Console.ReadKey();
 
-			}
-			else if (oper == '/')
-			{
-				result = a / b;
-				Console.WriteLine("Деление чисел равна: " + result);
-				Console.ReadKey();
-			}
+			//}
+			//else if (oper == '/')
+			//{
+			//	result = a / b;
+			//	Console.WriteLine("Деление чисел равна: " + result);
+			//	Console.ReadKey();
+			//}
+
+
+
+
+
+
+
 		}
 	}
 }
