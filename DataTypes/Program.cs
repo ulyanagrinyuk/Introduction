@@ -62,16 +62,16 @@ namespace DataTypes
 #endif
 
 
-			Console.WriteLine("Введите стоимость тетради:");
-			double price_of_copybook = Convert.ToDouble(Console.ReadLine());
-			Console.WriteLine("Введите количество тетрадей:");
-			int number_of_copybook = Convert.ToInt32(Console.ReadLine());
-			Console.WriteLine("Введите стоимость карандаша:");
-			double price_of_pencil = Convert.ToDouble(Console.ReadLine());
-			Console.WriteLine("Введите количство карадашей:");
-			int number_of_pencil = Convert.ToInt32(Console.ReadLine());
-			double total_price = price_of_copybook * number_of_copybook * price_of_pencil * number_of_pencil;
-			Console.WriteLine("Общая стоимость:" + ((price_of_copybook * number_of_copybook) + (price_of_pencil * number_of_pencil)));
+			//Console.WriteLine("Введите стоимость тетради:");
+			//double price_of_copybook = Convert.ToDouble(Console.ReadLine());
+			//Console.WriteLine("Введите количество тетрадей:");
+			//int number_of_copybook = Convert.ToInt32(Console.ReadLine());
+			//Console.WriteLine("Введите стоимость карандаша:");
+			//double price_of_pencil = Convert.ToDouble(Console.ReadLine());
+			//Console.WriteLine("Введите количство карадашей:");
+			//int number_of_pencil = Convert.ToInt32(Console.ReadLine());
+			//double total_price = price_of_copybook * number_of_copybook * price_of_pencil * number_of_pencil;
+			//Console.WriteLine("Общая стоимость:" + ((price_of_copybook * number_of_copybook) + (price_of_pencil * number_of_pencil)));
 
 
 			//Console.WriteLine("Введите стоимость тетради:");
