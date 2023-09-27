@@ -83,6 +83,15 @@ namespace Arrays
 					Console.Write(jagged_arr[i][j] + "\t");
                 }
 				Console.WriteLine();
+				int[][,] jagged_arr_2 = new int[][,]
+				{
+					i_arr_2,
+					new int[,]
+					{
+						{ 256, 384, 512, 768},
+						{ 1024, 2048, 3072, 4096}
+					}
+				};
 			}
 			
 		}
