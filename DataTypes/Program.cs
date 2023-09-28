@@ -65,16 +65,16 @@ namespace DataTypes
 
 
 
-			//Console.WriteLine("Введите стоимость тетради:");
-			//double price_of_copybook = Convert.ToDouble(Console.ReadLine());
-			//Console.WriteLine("Введите количество тетрадей:");
-			//int number_of_copybook = Convert.ToInt32(Console.ReadLine());
-			//Console.WriteLine("Введите стоимость карандаша:");
-			//double price_of_pencil = Convert.ToDouble(Console.ReadLine());
-			//Console.WriteLine("Введите количство карадашей:");
-			//int number_of_pencil = Convert.ToInt32(Console.ReadLine());
-			//double total_price = price_of_copybook * number_of_copybook * price_of_pencil * number_of_pencil;
-			//Console.WriteLine("Общая стоимость:" + ((price_of_copybook * number_of_copybook) + (price_of_pencil * number_of_pencil)));
+			Console.WriteLine("Введите стоимость тетради:");
+			double price_of_copybook = Convert.ToDouble(Console.ReadLine());
+			Console.WriteLine("Введите количество тетрадей:");
+			int number_of_copybook = Convert.ToInt32(Console.ReadLine());
+			Console.WriteLine("Введите стоимость карандаша:");
+			double price_of_pencil = Convert.ToDouble(Console.ReadLine());
+			Console.WriteLine("Введите количство карадашей:");
+			int number_of_pencil = Convert.ToInt32(Console.ReadLine());
+			double total_price = price_of_copybook * number_of_copybook * price_of_pencil * number_of_pencil;
+			Console.WriteLine("Общая стоимость:" + ((price_of_copybook * number_of_copybook) + (price_of_pencil * number_of_pencil)));
 
 
 			//Console.WriteLine("Введите стоимость тетради:");
@@ -87,14 +87,14 @@ namespace DataTypes
 			//Console.WriteLine("Общая стоимость:" + ((price_of_copybook ) + (price_of_cover * number_of_price)));
 
 
-			//Console.WriteLine("Расстояние до дачи:");
-			//double distance_to_the_cottage = Convert.ToDouble(Console.ReadLine());
-			//Console.WriteLine("Расход бензина:");
-			//double gasoline_consumption = Convert.ToDouble(Console.ReadLine());
-			//Console.WriteLine("Цена литра бензина:");
-			//int price_of_gasoline = Convert.ToInt32(Console.ReadLine());
-			//double trip_to_the_cottageand_back = distance_to_the_cottage * gasoline_consumption * price_of_gasoline;
-			//Console.WriteLine("Общая стоимость:" + trip_to_the_cottageand_back);
+			Console.WriteLine("Расстояние до дачи:");
+			double distance_to_the_cottage = Convert.ToDouble(Console.ReadLine());
+			Console.WriteLine("Расход бензина:");
+			double gasoline_consumption = Convert.ToDouble(Console.ReadLine());
+			Console.WriteLine("Цена литра бензина:");
+			int price_of_gasoline = Convert.ToInt32(Console.ReadLine());
+			double trip_to_the_cottageand_back = distance_to_the_cottage * gasoline_consumption * price_of_gasoline;
+			Console.WriteLine("Общая стоимость:" + trip_to_the_cottageand_back);
 
 
 			//double a;
