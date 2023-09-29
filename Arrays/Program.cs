@@ -11,29 +11,29 @@ namespace Arrays
 		static readonly String delimiter = "\n------------------------------------\n";
 		static void Main(string[] args)
 		{
-			
+
 			Console.Write("Введите размер массива: ");
 			int n = Convert.ToInt32(Console.ReadLine());
-			int[] arr = new int[n]; 
+			int[] arr = new int[n];
 			Random rand = new Random(0);
-			for(int i = 0; i < arr.Length; i++)
+			for (int i = 0; i < arr.Length; i++)
 			{
 				arr[i] = rand.Next(100, 200);
 			}
 
-			for(int i = 0; i < n; i++)
+			for (int i = 0; i < n; i++)
 			{
 				Console.Write(arr[i] + "\t");
 			}
 			Console.WriteLine();
 
-			foreach(int i in arr)
+			foreach (int i in arr)
 			{
 				Console.Write(i + "\t");
 			}
 			Console.WriteLine();
-            Console.WriteLine(arr.Rank);
-            Console.WriteLine(delimiter);
+			Console.WriteLine(arr.Rank);
+			Console.WriteLine(delimiter);
 
 			//////////////////////////////////////////////////////////
 
@@ -42,33 +42,33 @@ namespace Arrays
 			Console.Write("Введите количество элементов строки: ");
 			int cols = Convert.ToInt32(Console.ReadLine());
 			int[,] i_arr_2 = new int[rows, cols];
-			for(int i =0; i < rows; i++)
+			for (int i = 0; i < rows; i++)
 			{
-				for(int j = 0; j < cols; j++)
+				for (int j = 0; j < cols; j++)
 				{
-					i_arr_2[i,j]= rand.Next(100);
+					i_arr_2[i, j] = rand.Next(100);
 				}
 			}
-			for(int i = 0; i < i_arr_2.GetLength(0);i++)
+			for (int i = 0; i < i_arr_2.GetLength(0); i++)
 			{
-				for (int j = 0;j < i_arr_2.GetLength(1); j++)
+				for (int j = 0; j < i_arr_2.GetLength(1); j++)
 				{
-					Console.Write(i_arr_2[i, j]+"\t");
+					Console.Write(i_arr_2[i, j] + "\t");
 				}
 				Console.WriteLine();
 			}
 			Console.WriteLine(i_arr_2.Rank);
 			Console.WriteLine(i_arr_2.GetLength(0));
 			Console.WriteLine(i_arr_2.GetLength(1));
-			foreach(int i in i_arr_2)
+			foreach (int i in i_arr_2)
 			{
-				Console.Write(i+"\t");
+				Console.Write(i + "\t");
 			}
 			Console.WriteLine();
 			Console.WriteLine(delimiter);
 
 			////////////////////////////////////////////////////////
-				
+
 
 			int[][] jagged_arr = new int[][]
 			{
@@ -76,12 +76,12 @@ namespace Arrays
 				new int[]{ 34, 55, 89},
 				new int[]{ 144, 233, 377, 510}
 			};
-			for(int i = 0; i <jagged_arr.Length; i++)
+			for (int i = 0; i < jagged_arr.Length; i++)
 			{
-				for(int j = 0; j  < jagged_arr[i].Length; j++)
+				for (int j = 0; j < jagged_arr[i].Length; j++)
 				{
 					Console.Write(jagged_arr[i][j] + "\t");
-                }
+				}
 				Console.WriteLine();
 				int[][,] jagged_arr_2 = new int[][,]
 				{
@@ -92,8 +92,47 @@ namespace Arrays
 						{ 1024, 2048, 3072, 4096}
 					}
 				};
-			}		
+			}
+
+
+			Console.WriteLine(" ");
+			int max = 0;
+			for (int i = 0; i < jagged_arr.Length; i++)
+			{
+				for (int j = 0; j < jagged_arr[i].Length; j++)
+				{
+					if (jagged_arr[i][j] < max) max = jagged_arr[i][j];
+				}
+				Console.WriteLine($" максимальное значение для массива: {arr.Max()}");
+			}
+
+			Console.WriteLine(" ");
+			int min = 0;
+			for (int i = 0; i < jagged_arr.Length; i++)
+			{
+				for (int j = 0; j < jagged_arr[i].Length; j++)
+				{
+					if (jagged_arr[i][j] > min) min = jagged_arr[i][j];
+				}
+				Console.WriteLine($"минимальное значение для массива: {arr.Min()}");
+			}
+
+
+			Console.WriteLine(" ");
+			int sum = 0;
+			{
+				for (int i = 0; i < jagged_arr.Length; i++)
+				{
+					for (int j = 0; j < jagged_arr[i].Length; j++)
+					{
+						sum += jagged_arr[i][j];
+					}
+				}
+				Console.WriteLine($" Сумма элементов массива: {arr.Sum()}");
+			}
+
+		}
 
 		}
 	}
-}
+
