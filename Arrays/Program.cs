@@ -93,46 +93,61 @@ namespace Arrays
 					}
 				};
 			}
+			//Console.WriteLine(" максимальное значение для массива: ");
+			//int max = 0;
+			//for (int i = 0; i < jagged_arr.Length; i++)
+			//{
+			//	for (int j = 0; j < jagged_arr[i].Length; j++)
+			//	{
+			//		if (jagged_arr[i][j] < max) max = jagged_arr[i][j];
+			//	}
+			//	Console.WriteLine();
+			//}
+
+			//Console.WriteLine("минимальное значение для массива: ");
+			//int min = 0;
+			//for (int i = 0; i < jagged_arr.Length; i++)
+			//{
+			//	for (int j = 0; j < jagged_arr[i].Length; j++)
+			//	{
+			//		if (jagged_arr[i][j] > min) min = jagged_arr[i][j];
+			//	}
+			//	Console.WriteLine();
+			//}
 
 
-			Console.WriteLine(" ");
-			int max = 0;
-			for (int i = 0; i < jagged_arr.Length; i++)
-			{
-				for (int j = 0; j < jagged_arr[i].Length; j++)
-				{
-					if (jagged_arr[i][j] < max) max = jagged_arr[i][j];
-				}
-				Console.WriteLine($" максимальное значение для массива: {arr.Max()}");
-			}
-
-			Console.WriteLine(" ");
-			int min = 0;
-			for (int i = 0; i < jagged_arr.Length; i++)
-			{
-				for (int j = 0; j < jagged_arr[i].Length; j++)
-				{
-					if (jagged_arr[i][j] > min) min = jagged_arr[i][j];
-				}
-				Console.WriteLine($"минимальное значение для массива: {arr.Min()}");
-			}
-
-
-			Console.WriteLine(" ");
-			int sum = 0;
-			{
-				for (int i = 0; i < jagged_arr.Length; i++)
-				{
-					for (int j = 0; j < jagged_arr[i].Length; j++)
-					{
-						sum += jagged_arr[i][j];
-					}
-				}
-				Console.WriteLine($" Сумма элементов массива: {arr.Sum()}");
-			}
+			//Console.WriteLine("Сумма элементов массива:");
+			//int sum = 0;
+			//{
+			//	for (int i = 0; i < jagged_arr.Length; i++)
+			//	{
+			//		for (int j = 0; j < jagged_arr[i].Length; j++)
+			//		{
+			//			sum += jagged_arr[i][j];
+			//		}
+			//	}
+			//	Console.WriteLine();
+			//}
 
 		}
-
+		public static void Fillrand(int[] arr)
+		{
+			Random random = new Random();
+			for (int i = 0; i < arr.Length; i++)
+			{
+				arr[i] = random.Next(100, 200);
+			}
 		}
+		public static void Print(int[] arr)
+		{
+			for(int i = 0; i < arr.Length;i++)
+			{
+				Console.Write(arr[i] +"\t");
+			}
+			Console.WriteLine();
+		}
+		
+
+	}
 	}
 
