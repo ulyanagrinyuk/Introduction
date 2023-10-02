@@ -35,6 +35,21 @@ namespace Arrays
 			Console.WriteLine(arr.Rank);
 			Console.WriteLine(delimiter);
 
+
+			Console.WriteLine($"Сумма элементов массива: {arr.Sum()}");
+			Console.WriteLine($"Среднее-арифметическое элементов массива: {arr.Average()}");
+			Console.WriteLine($"Минимальное значение в массиве: {arr.Min()}");
+			Console.WriteLine($"Максимальное значение в массиве: {arr.Max()}");
+
+			double[] d_arr = new double[n];
+			FillRand(d_arr);
+			Print(d_arr);
+			Console.WriteLine($"Сумма элементов массива: {d_arr.Sum()}");
+			Console.WriteLine($"Среднее-арифметическое элементов массива: {d_arr.Average()}");
+			Console.WriteLine($"Минимальное значение в массиве: {d_arr.Min()}");
+			Console.WriteLine($"Максимальное значение в массиве: {d_arr.Max()}");
+
+
 			//////////////////////////////////////////////////////////
 
 			Console.Write("Введите количество строк: ");
@@ -66,6 +81,15 @@ namespace Arrays
 			}
 			Console.WriteLine();
 			Console.WriteLine(delimiter);
+
+
+			Console.WriteLine();
+			Console.WriteLine($"Сумма элементов массива: {i_arr_2.Cast<int>().Sum()}");
+			Console.WriteLine($"Среднее-арифметическое элементов массива: {i_arr_2.Cast<int>().Average()}");
+			Console.WriteLine($"Минимальное значение в массиве: {i_arr_2.Cast<int>().Min()}");
+			Console.WriteLine($"Максимальное значение в массиве: {i_arr_2.Cast<int>().Max()}");
+			Console.WriteLine(delimiter);
+
 
 			////////////////////////////////////////////////////////
 
@@ -146,7 +170,83 @@ namespace Arrays
 			}
 			Console.WriteLine();
 		}
-		
+
+
+
+		public static void FillRand(int[] arr)
+		{
+			Random rand = new Random(0);    
+			for (int i = 0; i < arr.Length; i++)
+			{
+				arr[i] = rand.Next(100, 200);
+			}
+		}
+		public static void FillRand(double[] arr)
+		{
+			Random rand = new Random(0);   
+			for (int i = 0; i < arr.Length; i++)
+			{
+				arr[i] = (double)rand.Next(100, 200) / 10;
+			}
+		}
+		public static void FillRand(int[,] arr)
+		{
+			Random rand = new Random(0);
+			for (int i = 0; i < arr.GetLength(0); i++)
+			{
+				for (int j = 0; j < arr.GetLength(1); j++)
+				{
+					arr[i, j] = rand.Next(100);
+				}
+			}
+		}
+
+
+		public static void Print<T>(T[] arr)
+		{
+			for (int i = 0; i < arr.Length; i++)
+			{
+				Console.Write(arr[i] + "\t");
+			}
+			Console.WriteLine();
+		}
+		public static void Print<T>(T[,] arr)
+		{
+			for (int i = 0; i < arr.GetLength(0); i++)
+			{
+				for (int j = 0; j < arr.GetLength(1); j++)
+				{
+					Console.Write(arr[i, j] + "\t");
+				}
+				Console.WriteLine();
+			}
+		}
+		public static void Print<T>(T[][] arr)
+		{
+			for (int i = 0; i < arr.Length; i++)
+			{
+				for (int j = 0; j < arr[i].Length; j++)
+				{
+					Console.Write(arr[i][j] + "\t");
+				}
+				Console.WriteLine();
+			}
+		}
+		public static int Sum(int[][] arr)
+		{
+			int sum = 0;
+			foreach (int[] i in arr)
+			{
+				sum += i.Sum();
+			}
+			return sum;
+		}
+		public static int Count(int[][] arr)
+		{
+			int count = 0;
+			foreach (int[] i in arr) count += i.Count();
+			return count;
+		}
 
 	}
 	}
