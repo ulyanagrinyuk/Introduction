@@ -15,7 +15,6 @@ namespace Enumerations
 			DayOfWeek day = DayOfWeek.Friday;
 			Console.WriteLine(day);
 			string[] dayName = Enum.GetNames(typeof(DayOfWeek));
-			//foreach(string i in dayName)
 			for (int i = 0; i < dayName.Length; i++)
 			{
 				Console.WriteLine(i + "\t" + dayName[i]);
@@ -28,10 +27,9 @@ namespace Enumerations
 			ulong[] distValues = (ulong[])Enum.GetValues(typeof(DistanceFromSun));
 			for (int i = 0; i < distNames.Length; i++)
 			{
-				Console.WriteLine($"{distNames[i]} \t"{ distNames[i]});
-		
-		Console.WriteLine((Enum.GetUnderlyingType(typeof(DistanceFromSun))).FullName);
-
+				Console.WriteLine($"{distNames[i]} \t {distValues[i]}");
+			}
+			Console.WriteLine((Enum.GetUnderlyingType(typeof(DistanceFromSun))).FullName);
 		}
 		enum DayOfWeek { Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };
 		enum DistanceFromSun : ulong
@@ -39,7 +37,7 @@ namespace Enumerations
 			Sun = 0,
 			Mercury = 57900000,
 			Venus = 108200000,
-			Earth= 149600000
+			Earth = 149600000
 		};
 
 	}
